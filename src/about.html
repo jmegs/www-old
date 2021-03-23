@@ -1,0 +1,29 @@
+---
+title: About
+layout: base
+---
+
+<div class="md:grid grid-cols-2">
+  {% include "image", src: "folio/portrait.jpg", 
+                      alt: "bar", 
+                      class: "object-cover",
+                      loading: "eager" %}
+                      
+  <div class="p-4 md:p-8 mx-auto">
+
+    <div class="prose-lg lg:prose-xl">
+    {% markdown %}
+Currently a Senior Product Designer at [Squarespace], John specializes in clarifying complex ecosystems, building digital experiences in physical spaces, and prototyping ideas in code.
+
+On the Trial Experience team at Squarespace he creates onboarding, educational features, and cross-team collaborations that enable a coherent user experience across the full product and drive business growth. Additionally, he builds tools and processes that empower collaboration between designers and engineers.
+
+Previously he worked in Experience Design at [R/GA], building products and tech-enabled consumer experiences for the world’s biggest brands like Samsung, Mercedes, Equinox, and Verizon.
+
+When not drawing rectangles on screen, he's a passionate home cook, restaurant goer, and lover of interior design, prestige tv, and hikes – especially ones that end at a great place to eat.
+
+[Squarespace]: https://squarespace.com
+[R/GA]: https://rga.com
+    {% endmarkdown %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+{% case page.url %}
+  {% when "/" %}
+    {% capture titleString -%} {{ site.title }} · Product Designer {%- endcapture %}
+    {% assign ogimage = "folio/open-graph-screenshot.jpg" %}
+  {% else %}
+    {% capture titleString -%} {{ title }} · {{ site.title }} {%- endcapture %}
+    {% assign ogimage = "folio/open-graph.jpg" %}
+{% endcase %}
+
+<!-- Primary Meta Tags -->
+<title>{{ titleString }}</title>
+<meta name="title" content="{{titleString}}">
+<meta name="description" content="{{ description | default: site.description }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ titleString }}">
+<meta property="og:description" content="{{ description | default: site.description}}">
+<meta property="og:image" content="{{site.cloudinary_url}}/{{ogimage}}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="{{ titleString }}">
+<meta property="twitter:description" content="{{ description | default: site.description}}">
+<meta property="twitter:image" content="{{site.cloudinary_url}}/{{ogimage}}">

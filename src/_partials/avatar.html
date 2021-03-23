@@ -1,0 +1,14 @@
+{% assign base_url = "https://res.cloudinary.com/jmegs" %}
+{% assign src = "avatar.jpg"%}
+
+<img 
+class="w-8 h-8 rounded-full object-cover"
+width="32px"
+height="32px"
+sizes="32px"
+srcset="
+      {{base_url}}/f_auto,w_32/{{src}}   32w,
+      {{base_url}}/f_auto,w_64/{{src}}   64w,
+"
+src="{{base_url}}/f_auto,w_32/{{src}}" 
+alt="headshot of john smiling on a dark background">

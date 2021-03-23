@@ -1,0 +1,53 @@
+{% layout 'base' %} 
+
+{% block 'heading' %}
+<h1 class="font-headline text-5xl md:text-6xl max-w-[17ch]">
+  John Meguerian is a <em>concept to code</em> product designer based in NYC.
+</h1>
+{% endblock %} 
+
+{% block 'content' %}
+
+<section class="space-y-20 md:space-y-40">
+  {% for project in collections.sortedProjects %} 
+  
+  {%- capture loadingValue %} 
+    {%- if forloop.first -%} eager {%- else -%} lazy {%- endif -%} 
+  {% endcapture -%}
+  
+  <article>
+    <header class="p-4 md:p-8 text-sm uppercase md:flex justify-between items-baseline">
+      <h3>
+        {{ forloop.index | leftpad }} _ {{project.data.client}} {{ project.data.title }}
+      </h3>
+      <a class="hidden md:block underline hover:no-underline" href="{{project.url | url}}">View Project</a>
+    </header>
+    <div class="bg-gray-50 dark:bg-gray-900">
+      <a href="{{project.url | url}}">
+        {% include "image" src: project.data.thumbnail_url, loading: loadingValue %}
+      </a>
+    </div>
+  </article>
+
+  {% endfor %}
+</section>
+
+<section class="py-32">
+  <h2 class="text-sm uppercase p-4 md:p-8">
+    {{ collections.projects | size | plus: 1 | leftpad }} _ Side Projects
+  </h2>
+  <ul class="hover-list">
+    {% for item in sideprojects %}
+      <li class="hover-list-item uppercase text-sm md:grid grid-cols-3 p-4 md:p-8 space-y-4 md:space-y-0">
+        <h3 class="">{{item.title}}</h3>
+        <p class="normal-case text-base font-normal">{{item.description}}</p>
+        <div class="md:justify-self-end flex space-x-4">
+          <a class="underline hover:no-underline" href="{{item.url}}">Visit</a>
+          <a class="underline hover:no-underline" href="{{item.repo}}">Source Code</a>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% endblock %}

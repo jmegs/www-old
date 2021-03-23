@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navlink {
+    @apply text-sm uppercase underline hover:no-underline border-black;
+  }
+
+  .title {
+    @apply font-headline text-5xl md:text-6xl;
+    line-height: 1.15;
+    max-width: 17ch;
+  }
+
+  .hover-list {
+    @apply border-t border-b divide-y divide-gray-50 dark:divide-gray-800 border-gray-50 dark:border-gray-800 hover:text-gray-600 dark:hover:text-gray-300;
+  }
+
+  .hover-list-item {
+    @apply hover:text-black dark:hover:text-white transition-colors duration-200;
+  }
+
+  .prose {
+    @apply text-gray-900 dark:text-gray-300;
+  }
+
+  .prose a {
+    @apply text-gray-900 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200;
+  }
+
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    @apply text-gray-900 dark:text-gray-200;
+  }
+
+  .prose h2 {
+    @apply text-xl uppercase font-medium;
+  }
+
+  .prose h3,
+  .prose h4 {
+    @apply text-sm uppercase font-medium;
+  }
+
+  .prose ol li::before {
+    @apply dark:text-gray-400;
+  }
+
+  .prose img {
+    @apply bg-gray-50 dark:bg-gray-900;
+  }
+}

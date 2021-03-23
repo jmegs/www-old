@@ -1,0 +1,16 @@
+{% assign base_url = "https://res.cloudinary.com/jmegs" %}
+
+<img 
+class="{{ class }}"
+width="{{width | default: 1920}}"
+height="{{height | default: 1280}}"
+sizes="{{sizes | default: '(min-width: 1440px) 1440px, 100vw'}}"
+srcset="
+      {{base_url}}/f_auto,w_360/{{src}}   360w,
+      {{base_url}}/f_auto,w_720/{{src}}   720w,
+      {{base_url}}/f_auto,w_1280/{{src}} 1280w,
+      {{base_url}}/f_auto,w_2560/{{src}} 2560w
+"
+src="{{base_url}}/f_auto,w_1280/{{src}}" 
+alt="{{alt | default: ''}}"
+loading="{{loading | default: 'lazy'}}">

@@ -1,0 +1,14 @@
+{% layout 'base' %}
+{% block 'heading'%}
+  <h1 class="font-headline text-5xl md:text-6xl max-w-[17ch]">{{title}}</h1>
+  <div class="flex items-center space-x-2 py-4 uppercase text-sm font-medium tracking-wide">
+    {% include 'avatar' %}
+    <div>John Meguerian</div>
+    <div><time datetime="{{date | ISODate}}">{{date | humanDate}}<time></div>
+  </div>
+{% endblock %}
+{% block 'content' %}
+  <div class="prose lg:prose-lg mx-auto">
+    {{ content }}
+  </div>
+{% endblock %}

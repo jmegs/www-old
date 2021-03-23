@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://use.typekit.net/pyz2mdg.css">
+  <link rel="stylesheet" href="/assets/styles/index.css">
+
+  {% include 'meta' %}
+  {% include 'analytics' %}
+  {% include 'favicons' %}
+</head>
+
+<body class="text-black dark:text-white dark:bg-black font-sans">
+  <div class="max-w-screen-2xl mx-auto">
+  {% include "navbar" %}
+  <main>
+    <section class="px-4 md:px-8 pb-32 md:pb-64">
+      {% block heading %}
+        <h1 class="font-headline text-5xl md:text-6xl max-w-[17ch]">{{ title }}</h1>
+      {% endblock %}
+    </section>
+    {% block content %}
+    {{ content }}
+    {% endblock %}
+  </main>
+  {% include 'footer' %}
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Tiny Tools",
+    "description": "Suite of tools that solve repetitive everyday design problems",
+    "url": "https://tinytools.design",
+    "repo": "https://github.com/jmegs/tiny-tools"
+  },
+  {
+    "title": "Bread Math",
+    "description": "Opinionated calculator for sourdough bakers math",
+    "url": "https://breadmath.com",
+    "repo": "https://github.com/jmegs/bread-math"
+  },
+  {
+    "title": "In the Beginning Was the Command Line",
+    "description": "A modern typesetting of Neal Stephenson's classic essay",
+    "url": "https://in-the-beginning-was-the-command-line.netlify.com",
+    "repo": "https://github.com/jmegs/in-the-beginning-was-the-command-line"
+  },
+  {
+    "title": "itsmarch.wtf",
+    "description": "How many days of March 2020 have we lived?",
+    "url": "https://itsmarch.wtf",
+    "repo": "https://github.com/jmegs/itsmarch.wtf"
+  }
+]
