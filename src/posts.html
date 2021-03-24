@@ -4,7 +4,8 @@ layout: base
 ---
 
 <ul class="hover-list">
-  {% for post in collections.posts %}
+  {% assign posts = collections.posts | reverse %}
+  {% for post in posts %}
     <li class="uppercase text-sm font-medium">
       <a class="hover-list-item md:flex justify-between p-4 md:p-8" href="{{ post.url | url }}">
         <div>{{ post.data.title }}</div>
